@@ -57,7 +57,4 @@ A complete local AI system powered by a private LLM with:
 🔗 GitHub Repository:  
 👉 https://github.com/ruigpb/Local-LLM-Chat-System
 
----
 
-## 🎧 Spotify (Optional)
-> Só funciona se um dia quiseres ativar — posso configurar isto contigo
