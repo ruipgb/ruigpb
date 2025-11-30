@@ -2,7 +2,7 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 */12 * * *"   # corre de 12 em 12 horas
+    - cron: "0 */12 * * *"
   workflow_dispatch:
   push:
     branches:
@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate Snake SVG
         uses: Platane/snk/svg-only@v3
@@ -23,14 +25,14 @@ jobs:
           outputs: |
             dist/snake.svg
 
-      - name: Commit and Push Snake SVG
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Move Snake
         run: |
           mkdir -p .github/assets
           cp dist/snake.svg .github/assets/snake.svg
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add .github/assets/snake.svg
-          git commit -m "Update snake animation" || echo "No changes to commit"
-          git push
+
+      - name: Commit and Push Snake SVG
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update snake animation"
+          branch: main
+          file_pattern: .github/assets/snake.svg
