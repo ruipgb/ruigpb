@@ -27,24 +27,6 @@
 
 ---
 
-## 📊 GitHub Stats
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ruigpb&show_icons=true&theme=radical" height="165"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ruigpb&layout=compact&theme=radical" height="165"/>
-</p>
-
----
-
-## 🐍 GitHub Contributions Snake
-
-> ⚠️ A cobra pode demorar **2 a 5 minutos** a aparecer depois do primeiro workflow correr.
-
-<p align="center">
-  <img src="./github/assets/snake.svg" alt="snake animation" />
-</p>
-
----
-
 ## 💼 Featured Projects
 
 ### 🔹 **Local LLM Chat System (CLI + Telegram + Web UI)**  
