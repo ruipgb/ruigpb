@@ -37,6 +37,6 @@ A complete local AI system powered by a private LLM with:
 - Full PDF guide included  
 
 🔗 GitHub Repository:  
-👉 https://github.com/ruigpb/Local-LLM-Chat-System
+https://github.com/ruigpb/Local-LLM-Chat-System
 
 
